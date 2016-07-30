@@ -7,7 +7,7 @@ html, body {
 #startWrap {
   background: #e67e22;
   box-sizing: border-box;
-  height: 750px;
+  height: 100vh;
   padding-top: 120px;
   width: 100%;
 }
