@@ -1,0 +1,9 @@
+{
+  "perhouse": {
+    "power": 11410,
+    "powerUnit": "kWhr   per year",
+    "cost": 1960,
+    "costUnit": "$NZ per year",  
+  }
+
+}
