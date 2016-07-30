@@ -8,6 +8,8 @@ def exec_cmd(cmd):
                             stderr=subprocess.PIPE).stdout.read()
 
 
+
+
 s = sys.argv[1]
 street= urllib.quote(s.encode("utf-8"))
 import os
@@ -20,6 +22,10 @@ import json
 json_data = json.loads(result)
 from pprint import pprint
 our_entry=None
+
+with open('auth_token', 'r') as myfile:
+	token = myfile.read().strip()
+
 # print(len(json_data['results']))
 # print(json_data)
 
@@ -48,8 +54,8 @@ cords = our_entry['geometry']['location']
 #url="http://solarview.niwa.co.nz/createImage?latitude=%f&longitude=%f&azimuth_angle=&zenith_angle=&image_title=Address+unknown" % (cords['lat'],cords['lng'])
 
 url ="curl -H 'Accept:application/json, text/javascript, */*; q=0.01' -H 'X-Requested-With:XMLHttpRequest' \
-   -H 'Cookie:symfony=ir91rh07jv14v95j2ojmmoep47ncfdaf5pjhd7he4a00flc7r9e0; _gat=1; _ga=GA1.3.1556352652.1469782649' \
-   'http://solarview.niwa.co.nz/createImage?latitude=%f&longitude=%f&azimuth_angle=&zenith_angle=&image_title=Address+unknown'" % (cords['lat'], cords['lng'])
+   -H 'Cookie:%s; _gat=1; _ga=GA1.3.1556352652.1469782649' \
+   'http://solarview.niwa.co.nz/createImage?latitude=%f&longitude=%f&azimuth_angle=&zenith_angle=&image_title=Address+unknown'" % (token,cords['lat'], cords['lng'])
 
 #print url
 try:
