@@ -8,18 +8,18 @@ html, body {
   background: #e67e22;
   box-sizing: border-box;
   height: 750px;
-  padding-top: 100px;
+  padding-top: 120px;
   width: 100%;
 }
 
 h1 {
   color: white;
   font-family: 'Biryani';
-  font-size: 56px;
+  font-size: 64px;
   font-weight: 700;
   margin: 0;
   padding: 0;
-  padding-bottom: 30px;
+  padding-bottom: 40px;
   text-align: center;
 }
 
@@ -46,10 +46,78 @@ h1 {
   color: white;
   font-size: 24px;
   height: 53px;
-  padding: 10px;
-  padding-left: 15px;
+  padding: 12px;
+  padding-left: 16px;
   position: absolute;
   right: 0;
   top: 0;
   width: 53px;
+}
+
+#addressBox-link:hover {
+  background: #733F11;
+  cursor: pointer;
+}
+
+
+.page {
+  height: 700px;
+  position: relative;
+}
+
+.page h2 {
+  font-size: 54px;
+}
+
+
+#productionWrap-page {
+  margin-top: 256px;
+  position: relative;
+}
+
+#sun {
+  background: green;
+  height: 256px;
+  margin: auto;
+  position: absolute;
+  top: -256px;
+  width: 100%;
+}
+
+#layer1 {
+  background: #FFE1DB;
+}
+
+#layer2 {
+  background: #FFD3C9;
+}
+
+#layer3 {
+  background: #FFC3B7;
+}
+
+p {
+  font-size: 24px;
+}
+
+.superlarge {
+  display: block;
+  font-size: 230px;
+  font-weight: 900;
+}
+
+.centerText {
+  text-align: center;
+}
+
+.canvas {
+  background: #EEE;
+}
+
+#productionCanvas {
+  height: 400px;
+  left: 25px;
+  position: absolute;
+  top: 25px;
+  width: 500px;
 }
