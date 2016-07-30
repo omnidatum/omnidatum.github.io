@@ -4,6 +4,7 @@
 $period = $_REQUEST['period'];
 $address = $_REQUEST['address'];
 $PWD = __DIR__;
+header('Content-Type: application/json');
 
 $address = escapeshellcmd($address);
 
