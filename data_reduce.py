@@ -7,7 +7,6 @@ result=0
 for row in spamreader:
 #	reduce(row, lambda x: x[4])
     #print row[4]
-
     a.append(row)
     pass
 from pprint import pprint

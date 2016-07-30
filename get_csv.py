@@ -50,6 +50,11 @@ if our_entry is None:
 	sys.exit()
 
 cords = our_entry['geometry']['location']
+
+if sys.argv[2] == 'sunshine':
+	
+	sys.exit()
+
 #pprint(our_entry)
 #url="http://solarview.niwa.co.nz/createImage?latitude=%f&longitude=%f&azimuth_angle=&zenith_angle=&image_title=Address+unknown" % (cords['lat'],cords['lng'])
 
