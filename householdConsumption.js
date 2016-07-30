@@ -18,8 +18,8 @@ var yAxis = d3.svg.axis()
     .orient("left");
 
 var line = d3.svg.line()
-    .x(function(d) { return x(d.date); })
-    .y(function(d) { return y(d.close); });
+    .x(function(d) { return x(d.month); })
+    .y(function(d) { return y(d.value); });
 
 var svg = d3.select("body").append("svg")
     .attr("width", width + margin.left + margin.right)
@@ -31,8 +31,12 @@ var svg = d3.select("body").append("svg")
   //if (error) throw error;
 var data = [162450.0, 157950.0, 140100.0, 98910.0, 75270.0, 61260.0, 76740.0, 94830.0, 117300.0, 136140.0, 151170.0, 150480.0];
 var months = [0,1,2,3,4,5,6,7,8,9,10,11];
-  x.domain(d3.extent(months, function(d) { return d; }));
-  y.domain(d3.extent(data, function(d) { return d; }));
+
+var terrible_idea = 0;
+var fucking_bravo = data.map(function(e){return{value: e, month:terrible_idea++}});
+
+x.domain(d3.extent(fucking_bravo, function(d) { return d.month; }));
+y.domain(d3.extent(fucking_bravo, function(d) { return d.value; }));
 
   svg.append("g")
       .attr("class", "x axis")
@@ -50,7 +54,7 @@ var months = [0,1,2,3,4,5,6,7,8,9,10,11];
       .text("Price ($)");
 
   svg.append("path")
-      //.datum(data)
+      .datum(fucking_bravo)
       .attr("class", "line")
       .attr("d", line);
 //});
