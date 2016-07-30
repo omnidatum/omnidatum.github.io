@@ -14,8 +14,8 @@ from pprint import pprint
 a=a[1:len(a)-1]
 
 for i in a:
-    result+=float(i[4])
-print result
+    result+=float(i[3])
+print result*30
 
 #for line in sys.stdin:
 #    print ', '.join(row)

@@ -48,7 +48,7 @@ cords = our_entry['geometry']['location']
 #url="http://solarview.niwa.co.nz/createImage?latitude=%f&longitude=%f&azimuth_angle=&zenith_angle=&image_title=Address+unknown" % (cords['lat'],cords['lng'])
 
 url ="curl -H 'Accept:application/json, text/javascript, */*; q=0.01' -H 'X-Requested-With:XMLHttpRequest' \
-   -H 'Cookie:symfony=aln3805nu7f2jd478akurcgr1gslu2g4m0n3o6cp5r8bf9v5q6f0; _gat=1; _ga=GA1.3.1556352652.1469782649' \
+   -H 'Cookie:symfony=70ja06t5o8ftvn765j6uqijp1rc93u8qbmunr8392pl524es0r10; _gat=1; _ga=GA1.3.1556352652.1469782649' \
    'http://solarview.niwa.co.nz/createImage?latitude=%f&longitude=%f&azimuth_angle=&zenith_angle=&image_title=Address+unknown'" % (cords['lat'], cords['lng'])
 
 #print url

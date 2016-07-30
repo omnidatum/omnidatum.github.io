@@ -1,5 +1,6 @@
 import csv
 import sys
+import json
 
 spamreader = csv.reader(sys.stdin, delimiter=',', quoting=csv.QUOTE_NONE)
 a=[]
@@ -24,10 +25,11 @@ for i in a:
 		sliding_shit=k
 		res.append(0)
 
-	res[len(res)-1]+=float(i[4])
+	res[len(res)-1]+=float(i[3])
 
-res = map(lambda x: str(x), res)
-print "\n".join(res)
+res = map(lambda x: round(x*100)/100.0, res)
+res = map(lambda x: x*30, res)
+print json.dumps(res)
 
 #for line in sys.stdin:
 #    print ', '.join(row)
