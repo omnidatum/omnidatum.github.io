@@ -1,9 +1,8 @@
 {
-  "perhouse": {
-    "power": 11410,
-    "powerUnit": "kWhr   per year",
-    "cost": 1960,
-    "costUnit": "$NZ per year",  
+  "perHousePerYear": {
+    "power": 7263,
+    "powerUnit": "kWh",
+    "cost": 2040,
+    "costUnit": "$NZ",
   }
-
 }
