@@ -8,14 +8,14 @@
     <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,600|Biryani:900' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
     <link rel='stylesheet' type='text/css' href='style.css'>
-    <script type="text/javascript" src="https://code.jquery.com/jquery-3.1.0.slim.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
   </head>
   <body>
     <div id='startWrap'>
       <h1>Catchy-title</h1>
       <div id='addressBox'>
         <input id='addressBox-input' type='text' placeholder='Enter your address'>
-        <a href='#productionWrap' class="production-wrap-jump-click"><div id='addressBox-link'><i class="fa fa-search" aria-hidden="true"></i></div></a>
+        <a class="production-wrap-jump-click"><div id='addressBox-link'><i class="fa fa-search" aria-hidden="true"></i></div></a>
       </div>
     </div>
 
@@ -26,12 +26,12 @@
       </div>
       -->
 
-      <div id='col1' class='col'>
+      <div id='productionWrap-col1' class='col'>
         <p class='label'>Your annual sunlight hours</p>
         <p class='bigNumber'>500</p>
       </div>
 
-      <div id='col3'>
+      <div id='productionWrap-col3'>
         <ul>
           <li>Low</li>
           <li>Medium</li>
@@ -39,17 +39,14 @@
         </ul>
       </div>
 
-      <div id='col2'>
+      <div id='productionWrap-col2'>
         <div id='productionCanvas' class='canvas'></div>
       </div>
-
-
-
     </div>
 
     <div id='consumptionWrap' class='page'>
-      <div class='page'>
-        <h2>Consumption</h2>
+      <div id=''>
+      <div class='consumptionWrap_col1'>
       </div>
     </div>
 
@@ -66,6 +63,25 @@
     </div>
 
     <script>
+      /*$("#addressBox-link").click(function() {
+        $('html, body').animate({
+            scrollTop: $("#productionWrap").offset().top
+        }, 2000);
+      });*/
+      $('#addressBox-link').click(function(e) {
+        console.log("hi");
+
+        $('#productionWrap').show();
+        $('#consumptionWrap').show();
+        $('#investmentWrap').show();
+        $('#environmentWrap').show();
+
+        $('html,body').animate({ scrollTop: jQuery('#productionWrap').offset().top}, 1000);
+        e.preventDefault();
+        return false;
+
+      });
+
       // This example displays an address form, using the autocomplete feature
       // of the Google Places API to help users fill in the information.
 
@@ -137,19 +153,12 @@
           });
         }
       }
-      $(function(){
         $('#productionWrap').hide();
         $('#consumptionWrap').hide();
         $('#investmentWrap').hide();
         $('#environmentWrap').hide();
         //$('#startWrap').height($(window).height());
-        $('.production-wrap-jump-click').click(function(){
-          $('#productionWrap').show();
-          $('#consumptionWrap').show();
-          $('#investmentWrap').show();
-          $('#environmentWrap').show();
-        });
-      })
+
     </script>
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBo0ysh6cdhugD8QqSzZKCKJkkYGfhqDKM&libraries=places&callback=initAutocomplete"
         async defer></script>
