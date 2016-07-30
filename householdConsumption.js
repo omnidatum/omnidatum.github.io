@@ -16,7 +16,7 @@ var margin = {top: 20, right: 20, bottom: 30, left: 50},
 344.4959933
 ];
 
-
+consumption=consumption.map(function(e){return e*1000;})
 var x = d3.scale.linear()
     .range([0, width]);
 
@@ -34,6 +34,9 @@ var yAxis = d3.svg.axis()
 var line = d3.svg.line()
     .x(function(d) { return x(d.month); })
     .y(function(d) { return y(d.value); });
+var line2 = d3.svg.line()
+    .x(function(d) { return x(d.month); })
+    .y(function(d) { return y(d.value); });
 
 var svg = d3.select("body").append("svg")
     .attr("width", width + margin.left + margin.right)
@@ -47,10 +50,18 @@ var data = [162450.0, 157950.0, 140100.0, 98910.0, 75270.0, 61260.0, 76740.0, 94
 var months = [0,1,2,3,4,5,6,7,8,9,10,11];
 
 var terrible_idea = 0;
+var fuck_d3 = 0;
 var fucking_bravo = data.map(function(e){return{value: e, month:terrible_idea++}});
+var fucking_charlie = consumption.map(function(e){return{value: e, month:fuck_d3++}})
 
 x.domain(d3.extent(fucking_bravo, function(d) { return d.month; }));
-y.domain(d3.extent(fucking_bravo, function(d) { return d.value; }));
+y.domain([
+  d3.min(fucking_bravo, function(d) { return d.value; }),
+  d3.max(fucking_charlie, function(d) { return d.value; })
+]);
+
+//x.domain(d3.extent(fucking_charlie, function(d) { return d.month; }));
+//y.domain(d3.extent(fucking_charlie, function(d) { return d.value; }));
 
   svg.append("g")
       .attr("class", "x axis")
@@ -71,4 +82,9 @@ y.domain(d3.extent(fucking_bravo, function(d) { return d.value; }));
       .datum(fucking_bravo)
       .attr("class", "line")
       .attr("d", line);
+
+  svg.append("path")
+        .datum(fucking_charlie)
+        .attr("class", "line2")
+        .attr("d", line2);
 //});
