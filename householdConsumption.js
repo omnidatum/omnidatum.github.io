@@ -16,6 +16,19 @@ var margin = {top: 20, right: 20, bottom: 30, left: 50},
 344.4959933
 ];
 
+
+
+// system efficieny fuck equation 
+var sysSize = 6;
+var effRate = 0.89;
+
+
+
+
+
+
+
+
 consumption=consumption.map(function(e){return e*1000;})
 var x = d3.scale.linear()
     .range([0, width]);
@@ -47,6 +60,9 @@ var svg = d3.select("body").append("svg")
 //d3.json("linechart.json", type, function(error, data) {
   //if (error) throw error;
 var data = [162450.0, 157950.0, 140100.0, 98910.0, 75270.0, 61260.0, 76740.0, 94830.0, 117300.0, 136140.0, 151170.0, 150480.0];
+
+data = data.map(function(e){return e*sysSize *effRate})
+
 var months = [0,1,2,3,4,5,6,7,8,9,10,11];
 
 var terrible_idea = 0;
@@ -56,12 +72,11 @@ var fucking_charlie = consumption.map(function(e){return{value: e, month:fuck_d3
 
 x.domain(d3.extent(fucking_bravo, function(d) { return d.month; }));
 y.domain([
-  d3.min(fucking_bravo, function(d) { return d.value; }),
+  0,
   d3.max(fucking_charlie, function(d) { return d.value; })
 ]);
 
-//x.domain(d3.extent(fucking_charlie, function(d) { return d.month; }));
-//y.domain(d3.extent(fucking_charlie, function(d) { return d.value; }));
+
 
   svg.append("g")
       .attr("class", "x axis")
@@ -76,7 +91,7 @@ y.domain([
       .attr("y", 6)
       .attr("dy", ".71em")
       .style("text-anchor", "end")
-      .text("Price ($)");
+      .text("KiloWatts (KWh)");
 
   svg.append("path")
       .datum(fucking_bravo)
@@ -87,4 +102,3 @@ y.domain([
         .datum(fucking_charlie)
         .attr("class", "line2")
         .attr("d", line2);
-//});
