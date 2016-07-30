@@ -23,7 +23,7 @@ function visualise(data){
               .attr("height", height);
 
     // scale
-    var scale = d3.scaleLinear()
+    var scale = d3.scale.linear()
                 .domain([0, max])
                 .range([0,height]);
 
