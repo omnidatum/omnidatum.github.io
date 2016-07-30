@@ -61,7 +61,6 @@ h1 {
 
 
 .page {
-  height: 700px;
   position: relative;
 }
 
@@ -70,33 +69,52 @@ h1 {
 }
 
 
-#productionWrap-page {
-  margin-top: 256px;
+#productionWrap {
+  background: #2B2E39;
+  padding: 25px;
   position: relative;
 }
 
-#sun {
-  background: green;
-  height: 256px;
-  margin: auto;
+#col1 {
   position: absolute;
-  top: -256px;
-  width: 100%;
+  left: 25px;
 }
 
-#layer1 {
-  background: #FFE1DB;
+#col2 {
+  background: #353846;
+  height: 500px;
+  margin: auto;
+  width: 900px;
 }
 
-#layer2 {
-  background: #FFD3C9;
+#col3 {
+  position: absolute;
+  right: 25px;
 }
 
-#layer3 {
-  background: #FFC3B7;
+#col3 ul {
+  color: white;
+  list-style: none;
+}
+
+#col3 ul li {
+  background: #E67E22;
+  margin: 15px 0;
+  padding: 15px 40px;
+  text-align: center;
+}
+
+#col3 ul li:hover {
+  background: #CC701E;
+  cursor: pointer;
+}
+
+#productionWrap p {
+  color: white;
 }
 
 p {
+  margin: 0;
   font-size: 24px;
 }
 
@@ -114,10 +132,14 @@ p {
   background: #EEE;
 }
 
-#productionCanvas {
-  height: 400px;
-  left: 25px;
-  position: absolute;
-  top: 25px;
-  width: 500px;
+
+
+.label {
+
+}
+
+.bigNumber {
+  font-family: 'Open Sans';
+  font-size: 128px;
+  font-weight: 100;
 }

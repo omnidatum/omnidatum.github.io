@@ -9,7 +9,6 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
     <link rel='stylesheet' type='text/css' href='style.css'>
     <script type="text/javascript" src="https://code.jquery.com/jquery-3.1.0.slim.min.js"></script>
-
   </head>
   <body>
     <div id='startWrap'>
@@ -21,15 +20,31 @@
     </div>
 
     <div id='productionWrap' class='page'>
-      <div id='productionWrap-page' class='page'>
-        <div id='sun'>
-          <div id='layer1'></div>
-          <div id='layer2'></div>
-          <div id='layer3'></div>
-        </div>
+      <!--<div id='productionWrap-page' class='page'>
         <div id='productionCanvas' class='canvas'></div>
         <p class='centerText'><span class='superlarge'>500</span>sunlight hours</p>
       </div>
+      -->
+
+      <div id='col1' class='col'>
+        <p class='label'>Your annual sunlight hours</p>
+        <p class='bigNumber'>500</p>
+      </div>
+
+      <div id='col3'>
+        <ul>
+          <li>Low</li>
+          <li>Medium</li>
+          <li>High</li>
+        </ul>
+      </div>
+
+      <div id='col2'>
+        <div id='productionCanvas' class='canvas'></div>
+      </div>
+
+
+
     </div>
 
     <div id='consumptionWrap' class='page'>
