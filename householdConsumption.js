@@ -1,6 +1,20 @@
 var margin = {top: 20, right: 20, bottom: 30, left: 50},
     width = 960 - margin.left - margin.right,
     height = 500 - margin.top - margin.bottom;
+    
+    var consumption=[431.5478701,
+533.2770983,
+659.6372838,
+765.5841417,
+850.1054407,
+846.2252214,
+913.5385913,
+888.2328132,
+787.8532265,
+556.2210038,
+423.2813159,
+344.4959933
+];
 
 
 var x = d3.scale.linear()
