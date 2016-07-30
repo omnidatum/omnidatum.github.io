@@ -8,13 +8,15 @@
     <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,600|Biryani:900' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
     <link rel='stylesheet' type='text/css' href='style.css'>
+    <script type="text/javascript" src="https://code.jquery.com/jquery-3.1.0.slim.min.js"></script>
+
   </head>
   <body>
     <div id='startWrap'>
       <h1>Catchy-title</h1>
       <div id='addressBox'>
         <input id='addressBox-input' type='text' placeholder='Enter your address'>
-        <a href='#productionWrap'><div id='addressBox-link'><i class="fa fa-search" aria-hidden="true"></i></div></a>
+        <a href='#productionWrap' class="production-wrap-jump-click"><div id='addressBox-link'><i class="fa fa-search" aria-hidden="true"></i></div></a>
       </div>
     </div>
 
@@ -120,6 +122,18 @@
           });
         }
       }
+      $(function(){
+        $('#productionWrap').hide();
+        $('#consumptionWrap').hide();
+        $('#investmentWrap').hide();
+        $('#environmentWrap').hide();
+        $('.production-wrap-jump-click').click(function(){
+          $('#productionWrap').show();
+          $('#consumptionWrap').show();
+          $('#investmentWrap').show();
+          $('#environmentWrap').show();
+        });
+      })
     </script>
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBo0ysh6cdhugD8QqSzZKCKJkkYGfhqDKM&libraries=places&callback=initAutocomplete"
         async defer></script>
