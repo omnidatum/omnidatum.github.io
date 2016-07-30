@@ -1,33 +1,34 @@
 Station,SunshineHoursAnnual,Lat,Long
-Kaitaia Observatory,2068,-35.114448,173.269446
+Kaitaia Observatory,2068,-35.135,173.262
 Kerikeri,2005,-35.257227,173.919701
 Dargaville,1885,-35.942204,173.887837
 Auckland Albert Park,2066,-36.84955,174.767667
-Tauranga Aero,2256,-37.675786,176.210349
-Rotorua Aero,2119,-38.107235,176.318215
-Taupo,1975,-38.69021,176.081753
-Hamilton Ruakura,2013,-37.774821,175.307492
+Tauranga Aero,2256,-37.667,176.2
+Rotorua Aero,2119,-38.117,176.317
+Taupo,1975,-38.741,176.083
+Hamilton Ruakura,2013,-37.783,175.317
 Taumarunui,1627,-38.880051,175.255234
-New Plymouth Aero,2174,-39.007444,174.183701
+New Plymouth Aero,2174,-39.012,174.181
 Masterton Waingawa,1923,-40.971386,175.59027
 Gisborne Aero,2186,-38.660489,177.977702
-Napier Nelson Park,2188,-39.497219,176.910475
-Palmerston Nth,1723,-40.325323,175.621511
-Wellington Kelburn,2053,-41.284363,174.767115
-Wanganui Spriggens Park,2051,-39.937805,175.043782
+Napier Nelson Park,2188,-39.5,176.917
+Palmerston Nth,1723,-40.325,175.611
+Wellington Kelburn,2053,-41.283,174.767
+Wanganui Spriggens Park,2051,-39.945,175.046
 Westport Aero,1840,-41.7405,171.57931
 Hokitika Aero,1850,-42.713784,170.983293
-Nelson Aero,2392,-41.301559,173.222511
-Blenheim Research,2470,-41.513591,173.960015
+Nelson Aero,2392,-41.283,173.233
+Blenheim Research,2470,-41.52,173.872
 Hanmer Forest,1809,-42.533752,172.871166
-Christchurch Gardens,2035,-43.528791,172.625641
-Lake Tekapo,2206,-44.012525,170.496693
-Mt Cook,1580,-43.736072,170.100774
-Timaru Aero,1817,-44.30495,171.226422
-Dunedin Musselburgh,1590,-45.896973,170.518647
-Queenstown,1913,-45.0369,168.66081
+Christchurch Gardens,2035,-43.533,172.617
+Lake Tekapo,2206,-44.002,170.441
+Mt Cook,1580,-43.733,170.1
+Timaru Aero,1817,-44.303,171.225
+Dunedin Musselburgh,1590,-46.9,170.517
+Queenstown,1913,-45.024,168.737
 Alexandra,2042,-45.254656,169.390586
 Te Anau,1661,-45.420546,167.723147
 Gore Grasslands,1638,-46.116113,168.939583
-Invercargill Aero,1600,-46.411688,168.317688
-Stewart Island,1400,-46.892756,168.121052
+Invercargill Aero,1600,-46.419,168.329
+Chatham Islands,1437,-43.95,176.567
+Zero-point,0,0,0
