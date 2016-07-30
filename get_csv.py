@@ -1,8 +1,13 @@
-url = 'https://maps.googleapis.com/maps/api/geocode/json?components=country:NZ&address='
+url = 'https://maps.googleapis.com/maps/api/geocode/json?address=%s&components=country:NZ&key=AIzaSyBKWnoHqStGul53NQJpbQbkCDF1PPkf3-I'
 
 import urllib
 from subprocess import call
 import sys
+import csv
+
+def distance(p1,p2):
+	return math.sqrt(math.pow(p2[0]-p1[0], 2) + math.pow(p2[1]-p1[1], 2))
+
 def exec_cmd(cmd):
     return subprocess.Popen(cmd, shell=True, stdout=subprocess.PIPE,
                             stderr=subprocess.PIPE).stdout.read()
@@ -15,7 +20,7 @@ street= urllib.quote(s.encode("utf-8"))
 import os
 import subprocess
 
-result= exec_cmd("curl " +url+street)#.read()
+result= exec_cmd("curl " +(url % street))#.read()
 #print result
 #print result
 import json
@@ -27,7 +32,7 @@ with open('auth_token', 'r') as myfile:
 	token = myfile.read().strip()
 
 # print(len(json_data['results']))
-# print(json_data)
+#pprint(json_data)
 
 for x in json_data['results']:
 	good_shit = False # good shit
@@ -50,9 +55,26 @@ if our_entry is None:
 	sys.exit()
 
 cords = our_entry['geometry']['location']
+res = []
 
-if sys.argv[2] == 'sunshine':
-	
+if len(sys.argv)>2 and sys.argv[2] == 'sunshine':
+	import csv
+	from operator import itemgetter, attrgetter, methodcaller
+	import math
+	with open('sunshine-weather-locations.csv', 'rb') as csvfile:
+		spamreader = csv.reader(csvfile, delimiter=',', quoting=csv.QUOTE_NONE)
+
+		for row in spamreader:
+			if row[0]=='Station':
+				continue
+
+			res.append((
+				distance((float(row[2]), float(row[3])), (float(cords['lat']), float(cords['lng']))),
+				row[1]))
+		
+		res = sorted(res, key=itemgetter(0))
+		print res[0][1]
+		#print cords
 	sys.exit()
 
 #pprint(our_entry)
