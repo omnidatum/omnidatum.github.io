@@ -1,0 +1,55 @@
+html, body {
+  font-family: 'Open Sans';
+  margin: 0;
+  padding: 0;
+}
+
+#startWrap {
+  background: #e67e22;
+  box-sizing: border-box;
+  height: 750px;
+  padding-top: 100px;
+  width: 100%;
+}
+
+h1 {
+  color: white;
+  font-family: 'Biryani';
+  font-size: 56px;
+  font-weight: 700;
+  margin: 0;
+  padding: 0;
+  padding-bottom: 30px;
+  text-align: center;
+}
+
+#addressBox {
+  border: none;
+  height: 53px;
+  margin: auto;
+  position: relative;
+  width: 650px;
+}
+
+#addressBox-input {
+  border: none;
+  font-family: 'Open Sans';
+  font-size: 24px;
+  padding:  10px;
+  text-align: left;
+  width: inherit;
+}
+
+#addressBox-link {
+  background: #66380F;
+  box-sizing: border-box;
+  color: white;
+  font-size: 24px;
+  height: 53px;
+  padding: 10px;
+  padding-left: 15px;
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 53px;
+}
