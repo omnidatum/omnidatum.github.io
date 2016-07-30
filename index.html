@@ -2,81 +2,123 @@
   <head>
     <meta content="text/html;charset=utf-8" http-equiv="Content-Type">
     <meta content="utf-8" http-equiv="encoding">
+    
 
     <title>Catchy-title</title>
 
-    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,600|Biryani:900' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,600|Biryani:500,600,700,900' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
     <link rel='stylesheet' type='text/css' href='style.css'>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
   </head>
   <body>
     <div id='startWrap'>
-      <h1>Catchy-title</h1>
+      <h1>SolPower</h1>
+      <h3>Find whether you could save with Solar</h3>
       <div id='addressBox'>
-        <input id='addressBox-input' type='text' placeholder='Enter your address'>
-        <a class="production-wrap-jump-click"><div id='addressBox-link'><i class="fa fa-search" aria-hidden="true"></i></div></a>
-      </div>
-    </div>
-
-    <div id='productionWrap' class='page'>
-      <div id='productionWrap-col1' class='col'>
-        <p class='label'>Your annual sunlight hours</p>
-        <p class='bigNumber'>500</p>
-      </div>
-
-      <div id='productionWrap-col3'>
-        <ul>
-          <li>Low</li>
-          <li>Medium</li>
-          <li>High</li>
-        </ul>
-      </div>
-
-      <div id='productionWrap-col2'>
-        <div id='productionCanvas' class='canvas'></div>
-      </div>
-    </div>
-
-    <div id='consumptionWrap' class='page'>
-      <div id='consumptionWrap-inner'>
-        <div id='consumptionWrap-col2'>
-          <h2>It's complicated</h2>
-          <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
-          <p class='slant'>Read more all about it <a href='http://google.com'>here</a></p>
-        </div>
-
-        <div id='consumptionWrap-col1'>
-          <div id='consumptionCanvas' class='canvas'></div>
+        <div id='addressBox-inner'>
+          <input id='addressBox-input' type='text' placeholder='Enter your address'>
+          <a class="production-wrap-jump-click"><div id='addressBox-link'><i class="fa fa-search" aria-hidden="true"></i></div></a>
         </div>
       </div>
     </div>
 
-    <div id='investmentWrap' class='page'>
-      <div class='page'>
-        <h2>Investment</h2>
-      </div>
-    </div>
+    <div id='restWrap'>
+      <div id='productionWrap' class='page'>
+        <div id='productionWrap-col1' class='col'>
+          <p class='label'>Your annual sunlight hours</p>
+          <p class='bigNumber'>500</p>
+        </div>
 
-    <div id='environmentWrap' class='page'>
-      <div class='page'>
-        <h2>Eco-friendly-ness</h2>
+        <div id='productionWrap-col3'>
+          <ul id='optionList'>
+            <li class='selected'>Low</li>
+            <li>Medium</li>
+            <li>High</li>
+          </ul>
+        </div>
+
+        <div id='productionWrap-col2'>
+          <div id='productionCanvas' class='canvas dark'></div>
+        </div>
+      </div>
+
+      <div id='consumptionWrap' class='page'>
+        <div id='consumptionWrap-inner'>
+          <div id='consumptionWrap-col2'>
+            <h2>It's complicated</h2>
+            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+            <p class='slant'>Read more all about it <a href='http://google.com'>here</a></p>
+          </div>
+
+          <div id='consumptionWrap-col1'>
+            <div id='consumptionCanvas' class='canvas light'></div>
+          </div>
+        </div>
+      </div>
+
+      <div id='investmentWrap' class='page dark'>
+        <div id='investmentWrap-inner'>
+
+          <div class='canvas'>
+          </div>
+          <p>
+            Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.
+          </p>
+        </div>
+      </div>
+
+      <div id='environmentWrap' class='page'>
+        <div id='environmentWrap-inner'>
+          <p>And you're reducing <strong>1.4 tonnes</strong> of CO2 emissions every year.</p>
+        </div>
+      </div>
+
+      <div id='furtherWrap' class='page'>
+        <div id='furtherWrap-inner'>
+          <div class='col1'>
+            <img src='https://www.mysolarquotes.co.nz/assets/images/My-Solar-Quotes-Logo-2014.png'>
+            <p>My Solar Quotes is a unique service that eliminates hassle by selecting credible solar power installers for all your solar power needs.</p>
+            <p>My Solar Quotes is a service provider that instantly connects you with up to date and unbiased information on the diverse and rapidly changing solar power industry.</p>
+            <p>As a service provider, My Solar Quotes gives you instant and direct access to industry leading, premium solar power installers throughout New Zealand.</p>
+            <p>Read more <a href='https://www.mysolarquotes.co.nz/'>My Solar Quotes</a></p>
+          </div>
+
+          <div class='col2'>
+            <img src='https://www.mysolarquotes.co.nz/assets/images/My-Solar-Quotes-Logo-2014.png'>
+            <p>My Solar Quotes is a unique service that eliminates hassle by selecting credible solar power installers for all your solar power needs.</p>
+            <p>My Solar Quotes is a service provider that instantly connects you with up to date and unbiased information on the diverse and rapidly changing solar power industry.</p>
+            <p>As a service provider, My Solar Quotes gives you instant and direct access to industry leading, premium solar power installers throughout New Zealand.</p>
+            <p>Read more <a href='https://www.mysolarquotes.co.nz/'>My Solar Quotes</a></p>
+          </div>
+
+          <div class='col3'>
+            <img src='https://www.mysolarquotes.co.nz/assets/images/My-Solar-Quotes-Logo-2014.png'>
+            <p>My Solar Quotes is a unique service that eliminates hassle by selecting credible solar power installers for all your solar power needs.</p>
+            <p>My Solar Quotes is a service provider that instantly connects you with up to date and unbiased information on the diverse and rapidly changing solar power industry.</p>
+            <p>As a service provider, My Solar Quotes gives you instant and direct access to industry leading, premium solar power installers throughout New Zealand.</p>
+            <p>Read more <a href='https://www.mysolarquotes.co.nz/'>My Solar Quotes</a></p>
+          </div>
+        </div>
+      </div>
+
+      <div id='footerWrap'>
+        <p><i class="fa fa-code" aria-hidden="true"></i> with <i class="fa fa-heart" aria-hidden="true"></i> by <a href='https://github.com/omnidatum'>Omnidatum</a></p>
       </div>
     </div>
 
     <script>
-      /*$("#addressBox-link").click(function() {
-        $('html, body').animate({
-            scrollTop: $("#productionWrap").offset().top
-        }, 2000);
-      });*/
       $('#addressBox-link').click(function(e) {
         console.log("hi");
 
+        /*
         $('#productionWrap').show();
         $('#consumptionWrap').show();
         $('#investmentWrap').show();
         $('#environmentWrap').show();
+        */
+
+        $('#restWrap').show();
 
         $('html,body').animate({ scrollTop: jQuery('#productionWrap').offset().top}, 1000);
         e.preventDefault();
@@ -155,10 +197,12 @@
           });
         }
       }
-        $('#productionWrap').hide();
+        /*$('#productionWrap').hide();
         $('#consumptionWrap').hide();
         $('#investmentWrap').hide();
-        $('#environmentWrap').hide();
+        $('#environmentWrap').hide();*/
+        $('#restWrap').hide();
+
         //$('#startWrap').height($(window).height());
 
     </script>
