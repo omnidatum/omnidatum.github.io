@@ -63,6 +63,24 @@ var data = [162450.0, 157950.0, 140100.0, 98910.0, 75270.0, 61260.0, 76740.0, 94
 
 data = data.map(function(e){return e*sysSize *effRate/1000})
 
+
+var production = data;
+var buyprice = 0.1617;
+var sellprice= 0.08;
+
+var step;
+var sav=0;
+
+for (step = 0; step < 12; step++) {
+    if (consumption[step] > production[step]) {
+        sav += production[step] * buyprice;
+    } else {
+        sav += consumption[step] * buyprice + ((production[step]-consumption[step]) * sellprice);
+    }
+
+}
+
+
 var months = [0,1,2,3,4,5,6,7,8,9,10,11];
 
 var terrible_idea = 0;
