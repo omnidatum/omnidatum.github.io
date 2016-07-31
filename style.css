@@ -361,6 +361,10 @@ h2 {
   .page div {
     display: block;
   }
+
+  #environmentWrap-inner {
+    width: 100%;
+  }
 }
 
 @media (max-width: 1200px) {
