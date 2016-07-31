@@ -16,11 +16,8 @@ var margin = {top: 20, right: 20, bottom: 30, left: 50},
 344.4959933
 ];
 var data = [162450.0, 157950.0, 140100.0, 98910.0, 75270.0, 61260.0, 76740.0, 94830.0, 117300.0, 136140.0, 151170.0, 150480.0];
-var months = [0,1,2,3,4,5,6,7,8,9,10,11];*/
-
-
-
-
+var months = [0,1,2,3,4,5,6,7,8,9,10,11];
+*/
 
 
 $(function() {
@@ -30,7 +27,7 @@ $(function() {
   $('#addressBox-link').click(function(e) {
     $('#restWrap').show();
 
-    $('html,body').animate({ scrollTop: jQuery('#productionWrap').offset().top}, 1000);
+    $('html,body').animate({ scrollTop: jQuery('#prodItem2').offset().top}, 1000);
     e.preventDefault();
 
     var addressData = $("#addressBox-input").val();

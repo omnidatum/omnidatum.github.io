@@ -20,7 +20,7 @@ function visualise(data){
     var barWidth = width / 12;
 
     // create canvas
-    var svg = d3.select("#productionCanvas").append("svg")
+    var svg = d3.select("#prodItem2").append("svg")
               .attr("width", width)
               .attr("height", height);
 

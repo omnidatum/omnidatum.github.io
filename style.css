@@ -82,10 +82,37 @@ h3 {
   font-size: 54px;
 }
 
+#prodWrap {
+  background: #2B2E39;
+  color: white;
+
+  padding: 20px;
+}
+
+#prodContainer {
+  display: flex;
+  flex-direction: row;
+  margin: auto;
+  margin-bottom: 80px;
+  margin-top: 80px;
+  width: 1200px;
+}
+
+#prodItem1 {
+  flex-grow: 1;
+  width: 50%;
+}
+
+#prodItem2 {
+  flex-grow: 1;
+  width: 50%;
+}
+
 
 #productionWrap {
   background: #2B2E39;
   padding: 75px;
+  display:none;
   position: relative;
 }
 
