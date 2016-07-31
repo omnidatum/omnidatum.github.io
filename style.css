@@ -207,21 +207,21 @@ h3 {
 
 #furtherWrap-inner .col1 {
   box-sizing: border-box;
-  display: inline-block;
+
   padding: 0 15px;
   width: 390px;
 }
 
 #furtherWrap-inner .col2 {
   box-sizing: border-box;
-  display: inline-block;
+
   padding: 0 15px;
   width: 390px;
 }
 
 #furtherWrap-inner .col3 {
   box-sizing: border-box;
-  display: inline-block;
+
   padding: 0 15px;
   width: 390px;
 }
@@ -343,4 +343,14 @@ h2 {
  fill: none;
  stroke: black;
  stroke-width: 3px;
+}
+
+#furtherWrap-inner div {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+#furtherWrap-inner div img {
+
 }
