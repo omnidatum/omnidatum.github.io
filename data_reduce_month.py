@@ -26,7 +26,7 @@ for i in a:
 	res[len(res)-1]+=float(i[3])
 
 res = map(lambda x: round(x*100)/100.0, res)
-res = map(lambda x: x*30*24/1000, res)
+res = map(lambda x: x*30/1000, res)
 print json.dumps(res)
 
 #for line in sys.stdin:
