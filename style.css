@@ -324,9 +324,6 @@ h2 {
   fill:white;
 }
 @media (max-width: 1250px) {
-  .bigNumber {
-    color: red !important;
-  }
 
   .addressBox {
     box-sizing: border-box;
@@ -343,6 +340,11 @@ h2 {
   }
 }
 @media (max-width: 700px) {
+  #prodContainer {
+    flex-direction: column;
+  }
+
+
   #furtherWrap-inner {
     flex-direction: column;
   }
