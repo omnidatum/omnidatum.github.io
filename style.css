@@ -164,6 +164,26 @@ h3 {
   color: white;
 }
 
+/* EXTRA FIXES START */
+
+#consumptionWrap-inner {
+  display: flex;
+  flex-direction: row;
+  margin: auto;
+  margin-bottom: 80px;
+  margin-top: 80px;
+  padding: 20px;
+  width: 1200px;
+}
+
+#consumptionWrap-col1, #consumptionWrap-col2 {
+  flex-grow: 1;
+  width: 50%;
+}
+
+/* EXTRA FIXES END */
+
+/*
 #consumptionWrap-inner {
   margin: auto;
   margin-bottom: 80px;
@@ -181,6 +201,9 @@ h3 {
   float: right;
   width: 500px;
 }
+
+*/
+
 #investmentCanvas svg{
   margin:0 auto;
   display:inherit;
@@ -344,6 +367,13 @@ h2 {
     flex-direction: column;
   }
 
+  #consumptionWrap-inner {
+    flex-direction: row;
+  }
+
+  #consumptionWrap-col1, #consumptionWrap-col2 {
+    width: 100%;
+  }
 
   #furtherWrap-inner {
     flex-direction: column;
