@@ -11,6 +11,7 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
     <link rel='stylesheet' type='text/css' href='style.css'>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+    <script src='https://d3js.org/d3.v3.js'></script>
   </head>
   <body>
     <div id='startWrap'>
@@ -107,7 +108,7 @@
         <p><i class="fa fa-code" aria-hidden="true"></i> with <i class="fa fa-heart" aria-hidden="true"></i> by <a href='https://github.com/omnidatum'>Omnidatum</a></p>
       </div>
     </div>
-
+    <script src='solarbymonth.js'></script>
     <script>
 
       // This example displays an address form, using the autocomplete feature
@@ -116,6 +117,9 @@
       // This example requires the Places library. Include the libraries=places
       // parameter when you first load the API. For example:
       // <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&libraries=places">
+
+      var testMonthData = [220, 190, 150, 130, 110, 100, 120, 130, 150, 160, 190, 200];
+      visualise(testMonthData);
 
       var placeSearch, autocomplete;
       var componentForm = {
@@ -194,6 +198,9 @@
 
     </script>
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBo0ysh6cdhugD8QqSzZKCKJkkYGfhqDKM&libraries=places&callback=initAutocomplete" async defer></script>
+
     <script src='client.js'></script>
+
+    <script src='householdConsumption.js'></script>
   </body>
 </html>

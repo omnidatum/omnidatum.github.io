@@ -324,3 +324,23 @@ h2 {
     display: block;
   }
 }
+
+
+#productionCanvas {
+  height: 70%;
+  width: 90%;
+  padding: 100px;
+  background-color: #2B2E39
+}
+
+.line {
+ fill: none;
+ stroke: green;
+ stroke-width: px;
+}
+
+.line2 {
+ fill: none;
+ stroke: black;
+ stroke-width: 3px;
+}
