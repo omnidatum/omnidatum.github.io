@@ -160,6 +160,9 @@
         var place = autocomplete.getPlace();
 
         for (var component in componentForm) {
+          if (document.getElementById(component) == null) {
+            continue;
+          }
           document.getElementById(component).value = '';
           document.getElementById(component).disabled = false;
         }

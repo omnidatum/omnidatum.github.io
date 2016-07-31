@@ -7,6 +7,11 @@ $sunshine = $_REQUEST['sunshine'];
 $PWD = __DIR__;
 header('Content-Type: application/json');
 header('Access-Control-Allow-Origin: *');
+header('Access-Control-Allow-Methods: POST, GET, OPTIONS, HEAD');
+header('Access-Control-Allow-Headers: X-Requested-With');
+header('Access-Control-Max-Age: 1728000');
+
+
 
 $address = escapeshellcmd($address);
 
