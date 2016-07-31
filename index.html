@@ -2,9 +2,10 @@
   <head>
     <meta content="text/html;charset=utf-8" http-equiv="Content-Type">
     <meta content="utf-8" http-equiv="encoding">
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
 
 
-    <title>Catchy-title</title>
+    <title>Sol search</title>
 
     <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,600|Biryani:500,600,700,900' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
@@ -13,8 +14,8 @@
   </head>
   <body>
     <div id='startWrap'>
-      <h1>SolPower</h1>
-      <h3>Find whether you could save with Solar</h3>
+      <h1>SolSearch</h1>
+      <h3>Find out what you could save with Solar</h3>
       <div id='addressBox'>
         <div id='addressBox-inner'>
           <input id='addressBox-input' type='text' placeholder='Enter your address'>
@@ -27,7 +28,7 @@
       <div id='productionWrap' class='page'>
         <div id='productionWrap-col1' class='col'>
           <p class='label'>Your annual sunlight hours</p>
-          <p class='bigNumber'>500</p>
+          <p id='sunlightHoursNumber' class='bigNumber bigNumberRes'>500</p>
         </div>
 
         <div id='productionWrap-col3'>
@@ -60,7 +61,7 @@
       <div id='investmentWrap' class='page dark'>
         <div id='investmentWrap-inner'>
 
-          <div class='canvas'>
+          <div id='investmentCanvas' class='canvas'>
           </div>
           <p>
             Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.
@@ -85,19 +86,19 @@
           </div>
 
           <div class='col2'>
-            <img src='https://www.mysolarquotes.co.nz/assets/images/My-Solar-Quotes-Logo-2014.png'>
-            <p>My Solar Quotes is a unique service that eliminates hassle by selecting credible solar power installers for all your solar power needs.</p>
-            <p>My Solar Quotes is a service provider that instantly connects you with up to date and unbiased information on the diverse and rapidly changing solar power industry.</p>
-            <p>As a service provider, My Solar Quotes gives you instant and direct access to industry leading, premium solar power installers throughout New Zealand.</p>
-            <p>Read more <a href='https://www.mysolarquotes.co.nz/'>My Solar Quotes</a></p>
+            <img src='http://www.esolar.co.nz/wp-content/themes/esolar/img/logo.png'>
+            <p>Solar Electric Technology is one of New Zealand’s leading solar companies. Our technicians have installed over 1,000 solar power, solar hot water, wind and mini-hydro systems throughout New Zealand and Australia. Experience counts, we have become the trusted name in New Zealand solar.</p>
+            <p>We offer complete energy solutions for homes and business and have a network of trained installers across the country. We provide an all in one design, installation and customer care service.</p>
+            <p>Read more <a href='http://www.esolar.co.nz/'>eSolar</a></p>
+
           </div>
 
           <div class='col3'>
-            <img src='https://www.mysolarquotes.co.nz/assets/images/My-Solar-Quotes-Logo-2014.png'>
+            <img src='http://www.whatpowercrisis.co.nz/site/whatpowercrisis/images/basic_theme/logo.gif'>
             <p>My Solar Quotes is a unique service that eliminates hassle by selecting credible solar power installers for all your solar power needs.</p>
             <p>My Solar Quotes is a service provider that instantly connects you with up to date and unbiased information on the diverse and rapidly changing solar power industry.</p>
             <p>As a service provider, My Solar Quotes gives you instant and direct access to industry leading, premium solar power installers throughout New Zealand.</p>
-            <p>Read more <a href='https://www.mysolarquotes.co.nz/'>My Solar Quotes</a></p>
+            <p>Read more <a href='http://www.whatpowercrisis.co.nz/'>What Power Crisis</a></p>
           </div>
         </div>
       </div>
@@ -108,24 +109,6 @@
     </div>
 
     <script>
-      $('#addressBox-link').click(function(e) {
-        console.log("hi");
-
-        /*
-        $('#productionWrap').show();
-        $('#consumptionWrap').show();
-        $('#investmentWrap').show();
-        $('#environmentWrap').show();
-        */
-
-        $('#restWrap').show();
-        visualise(testMonthData);
-
-        $('html,body').animate({ scrollTop: jQuery('#productionWrap').offset().top}, 1000);
-        e.preventDefault();
-        return false;
-
-      });
 
       // This example displays an address form, using the autocomplete feature
       // of the Google Places API to help users fill in the information.
@@ -210,12 +193,7 @@
         //$('#startWrap').height($(window).height());
 
     </script>
-    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDgCWXoscQXgM9UoOEJ55WtWfuurtZHt7A&libraries=places&callback=initAutocomplete"
-        async defer></script>
-    <!--  d3 library and graph files-->
-    <script type="text/javascript" src="https://d3js.org/d3.v3.js"></script>
-    <script type="text/javascript" src="solarbymonth.js"></script>
-    <script type="text/javascript" src="householdConsumption.js"></script>
-
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBo0ysh6cdhugD8QqSzZKCKJkkYGfhqDKM&libraries=places&callback=initAutocomplete" async defer></script>
+    <script src='client.js'></script>
   </body>
 </html>
