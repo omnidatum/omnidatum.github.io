@@ -33,37 +33,28 @@ $(function() {
     var addressData = $("#addressBox-input").val();
 
     console.log(addressData);
+/*
+    $.ajax({
+      method: "get",
+      url: "http://test.soldout.tk/get_energy.php",
+      data: {
+        address: addressData,
+        period: 'year'
+      },
+      success: function(resy) {
+      }});*/
 
     $.ajax({
       method: "get",
       url: "http://test.soldout.tk/get_energy.php",
       data: {
         address: addressData,
-        sunshine: 1
+        period: 'month'
       },
-      success: function(ress) {
+      success: function(resm) {
 
-
-        $.ajax({
-          method: "get",
-          url: "http://test.soldout.tk/get_energy.php",
-          data: {
-            address: addressData,
-            period: 'month'
-          },
-          success: function(resm) {
-
-            $.ajax({
-              method: "get",
-              url: "http://test.soldout.tk/get_energy.php",
-              data: {
-                address: addressData,
-                period: 'year'
-              },
-              success: function(resy) {
 
                 visualise(resm);
-$("#sunlightHoursNumber").text(ress);
 
 var sysSize = 6;
 var effRate = 0.89;
@@ -257,13 +248,31 @@ y.domain(
 
 
 
+
+      }});
+
+    $.ajax({
+      method: "get",
+      url: "http://test.soldout.tk/get_energy.php",
+      data: {
+        address: addressData,
+        sunshine: 1
+      },
+      success: function(ress) {
+$("#sunlightHoursNumber").text(ress);
+      }});
+
+
+
+
+/*
                 console.log(ress, resm, resy);
               }
             });
           }
         });
       }
-    });
+    });*/
     return false;
   });
 
