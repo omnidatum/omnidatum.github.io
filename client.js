@@ -246,7 +246,7 @@ y.domain(
 
 
 
-
+$('#loading-front').hide();
 
 
       }});
