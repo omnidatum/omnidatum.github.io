@@ -1,7 +1,7 @@
 var margin = {top: 20, right: 20, bottom: 30, left: 50},
-    width = 960 - margin.left - margin.right,
-    height = 500 - margin.top - margin.bottom;
-    
+    width = 600 - margin.left - margin.right,
+    height = 400 - margin.top - margin.bottom;
+
     var consumption=[431.5478701,
 533.2770983,
 659.6372838,
@@ -18,7 +18,7 @@ var margin = {top: 20, right: 20, bottom: 30, left: 50},
 
 
 
-// system efficieny fuck equation 
+// system efficieny fuck equation
 var sysSize = 6;
 var effRate = 0.89;
 
@@ -29,7 +29,7 @@ var effRate = 0.89;
 
 
 
-consumption=consumption.map(function(e){return e*1000;})
+
 var x = d3.scale.linear()
     .range([0, width]);
 
@@ -51,7 +51,7 @@ var line2 = d3.svg.line()
     .x(function(d) { return x(d.month); })
     .y(function(d) { return y(d.value); });
 
-var svg = d3.select("body").append("svg")
+var svg = d3.select("#consumptionCanvas").append("svg")
     .attr("width", width + margin.left + margin.right)
     .attr("height", height + margin.top + margin.bottom)
   .append("g")
@@ -61,7 +61,7 @@ var svg = d3.select("body").append("svg")
   //if (error) throw error;
 var data = [162450.0, 157950.0, 140100.0, 98910.0, 75270.0, 61260.0, 76740.0, 94830.0, 117300.0, 136140.0, 151170.0, 150480.0];
 
-data = data.map(function(e){return e*sysSize *effRate})
+data = data.map(function(e){return e*sysSize *effRate/1000})
 
 var months = [0,1,2,3,4,5,6,7,8,9,10,11];
 
@@ -76,7 +76,7 @@ y.domain([
   d3.max(fucking_charlie, function(d) { return d.value; })
 ]);
 
-
+  
 
   svg.append("g")
       .attr("class", "x axis")

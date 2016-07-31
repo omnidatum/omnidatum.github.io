@@ -1,10 +1,12 @@
 function visualise(data){
 
+    // grab height of the parent container
+    var parent = document.getElementById('productionCanvas')
+
 
     // MARGIN
-    var margin = {top: 40, right: 20, bottom: 30, left: 40},
-        width = 300 - margin.left - margin.right,
-        height = 200 - margin.top - margin.bottom;
+    var width = 500;
+    var height = 400;
 
     //  find tha max of gdp scale
     var justPoints = [];
@@ -18,7 +20,7 @@ function visualise(data){
     var barWidth = width / 12;
 
     // create canvas
-    var svg = d3.select("body").append("svg")
+    var svg = d3.select("#productionCanvas").append("svg")
               .attr("width", width)
               .attr("height", height);
 
@@ -37,25 +39,14 @@ function visualise(data){
       //Enter
       .enter().append("rect")
                   .attr("width", barWidth)
-                  .attr("fill", "green")
+                  .attr("fill", "white")
                   // Update
                   .attr('height', function(d, i){return scale(data[i]) })
                   .attr('x', function(d, i){return barWidth*i })
                   .attr("y", function(d, i){ return height - scale(data[i])});
 
 
-      // labels
-      svg.append("text")      // text label for the x axis
-        .attr("x", 0 )
-        .attr("y", height )
-        .style("text-anchor", "middle")
-        .text("Jan");
 
-      svg.append("text")      // text label for the x axis
-        .attr("x", width )
-        .attr("y", height )
-        .style("text-anchor", "middle")
-        .text("Dec");
 
 
 
@@ -66,5 +57,3 @@ function visualise(data){
   }
 
   var testMonthData = [220, 190, 150, 130, 110, 100, 120, 130, 150, 160, 190, 200];
-
-  visualise(testMonthData);

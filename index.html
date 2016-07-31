@@ -2,7 +2,7 @@
   <head>
     <meta content="text/html;charset=utf-8" http-equiv="Content-Type">
     <meta content="utf-8" http-equiv="encoding">
-    
+
 
     <title>Catchy-title</title>
 
@@ -119,6 +119,7 @@
         */
 
         $('#restWrap').show();
+        visualise(testMonthData);
 
         $('html,body').animate({ scrollTop: jQuery('#productionWrap').offset().top}, 1000);
         e.preventDefault();
@@ -211,6 +212,10 @@
     </script>
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDgCWXoscQXgM9UoOEJ55WtWfuurtZHt7A&libraries=places&callback=initAutocomplete"
         async defer></script>
+    <!--  d3 library and graph files-->
+    <script type="text/javascript" src="https://d3js.org/d3.v3.js"></script>
+    <script type="text/javascript" src="solarbymonth.js"></script>
+    <script type="text/javascript" src="householdConsumption.js"></script>
 
   </body>
 </html>
