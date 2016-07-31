@@ -351,6 +351,6 @@ h2 {
   justify-content: center;
 }
 
-#furtherWrap-inner div img {
-
+#furtherWrap {
+  display: flex;
 }

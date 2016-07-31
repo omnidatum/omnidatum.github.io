@@ -26,10 +26,10 @@ var effRate = 0.89;
 
 
 
+function render(sysSize){
 
 
 
-function draw(){
 var x = d3.scale.linear()
     .range([0, width]);
 
@@ -121,23 +121,23 @@ y.domain([
         .attr("class", "line2")
         .attr("d", line2);
 
-
-
-// buttons
-draw();
-
-
 }
+// buttons
+render(sysSize);
+
 $("#lowButton").click(function(e){
   sysSize = 1.5;
-  draw();
+  $("#consumptionCanvas svg").remove();
+  render(sysSize);
 });
 
 $("#medButton").click(function(e){
-  sysSize = 4;
-  draw();
+  sysSize = 3;
+  $("#consumptionCanvas svg").remove();
+  render(sysSize);
 });
 $("#higButton").click(function(e){
   sysSize = 6;
-  draw();
+  $("#consumptionCanvas svg").remove();
+  render(sysSize);
 });
