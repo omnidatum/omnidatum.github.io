@@ -362,18 +362,26 @@ h2 {
     display: block;
   }
 }
-@media (max-width: 700px) {
+
+@media (max-width: 1200px) {
   #prodContainer {
     flex-direction: column;
   }
 
   #consumptionWrap-inner {
-    flex-direction: row;
+    box-sizing: border-box;
+    flex-direction: column;
+    padding: 40px;
+    width: 100%;
   }
 
   #consumptionWrap-col1, #consumptionWrap-col2 {
     width: 100%;
   }
+}
+
+@media (max-width: 700px) {
+
 
   #furtherWrap-inner {
     flex-direction: column;
