@@ -85,19 +85,44 @@ var consumption=[431.5478701,
 423.2813159,
 344.4959933
 ];
-var data = [162450.0, 157950.0, 140100.0, 98910.0, 75270.0, 61260.0, 76740.0, 94830.0, 117300.0, 136140.0, 151170.0, 150480.0];
+//var data = [162450.0, 157950.0, 140100.0, 98910.0, 75270.0, 61260.0, 76740.0, 94830.0, 117300.0, 136140.0, 151170.0, 150480.0];
 
-//data = resm;
-data = data.map(function(e){return e*sysSize*effRate/1000})
+data = resm;
+data = data.map(function(e){return e*sysSize*effRate})
+var production = data;
+var buyprice = 0.1617;
+var sellprice= 0.08;
+
+var step;
+var sav=0;
+
+for (step = 0; step < 12; step++) {
+   if (consumption[step] > production[step]) {
+       sav += production[step] * buyprice;
+   } else {
+       sav += consumption[step] * buyprice + ((production[step]-consumption[step]) * sellprice);
+   }
+
+}
+
+//var third_graph = [-13995, -13995+sav];
+var third_graph=[]
+for (var i = 0; i < 25; i++) {
+  third_graph[i] = -13995 + sav*i;
+}
 
 
 var terrible_idea = 0;
 var fuck_d3 = 0;
+var points_x = 0;
 var fucking_bravo = data.map(function(e){return{value: e, month:terrible_idea++}});
 var fucking_charlie = consumption.map(function(e){return{value: e, month:fuck_d3++}})
+var fucking_delta = third_graph.map(function(e){return{yax: e, xax: points_x++}})
 
 
-console.log(fucking_bravo)
+
+
+
 
 
 // system efficieny fuck equation
@@ -171,6 +196,69 @@ y.domain([
         .datum(fucking_charlie)
         .attr("class", "line2")
         .attr("d", line2);
+
+
+
+
+
+
+
+
+var x = d3.scale.linear()
+    .range([0, width]);
+var y = d3.scale.linear()
+    .range([height, 0]);
+var xAxis = d3.svg.axis()
+    .scale(x)
+    .orient("middle");
+var yAxis = d3.svg.axis()
+    .scale(y)
+    .orient("left");
+var line = d3.svg.line()
+    .x(function(d) { return x(d.xax); })
+    .y(function(d) { return y(d.yax); });
+var svg = d3.select("#investmentCanvas").append("svg")
+    .attr("width", width + margin.left + margin.right)
+    .attr("height", height + margin.top + margin.bottom)
+    .attr('style', "padding-left:40px")
+  .append("g")
+    .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
+
+
+
+x.domain(d3.extent(fucking_delta, function(d) { return d.xax; }));
+y.domain(
+
+
+  d3.extent(fucking_delta, function(d) { return d.yax; })
+
+
+);
+
+  
+
+  svg.append("g")
+      .attr("class", "x axis")
+      .attr("transform", "translate(0," + height/2 + ")")
+      .call(xAxis);
+  svg.append("g")
+      .attr("class", "y axis")
+      .call(yAxis)
+    .append("text")
+      .attr("transform", "rotate(-90)")
+      .attr("y", 6)
+      .attr("dy", ".71em")
+      .style("text-anchor", "end")
+      .text("Savings ($)");
+  svg.append("path")
+      .datum(fucking_delta)
+      .attr("class", "line")
+      .attr("d", line);
+
+
+
+
+
 
                 console.log(ress, resm, resy);
               }
