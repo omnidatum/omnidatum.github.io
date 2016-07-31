@@ -207,6 +207,7 @@ h3 {
 #investmentCanvas svg{
   margin:0 auto;
   display:inherit;
+  width: 100%;
 }
 #investmentWrap {
   background: #2B2E39;
