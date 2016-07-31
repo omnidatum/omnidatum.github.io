@@ -6,6 +6,7 @@ $address = $_REQUEST['address'];
 $sunshine = $_REQUEST['sunshine'];
 $PWD = __DIR__;
 header('Content-Type: application/json');
+header('Access-Control-Allow-Origin: *');
 
 $address = escapeshellcmd($address);
 
