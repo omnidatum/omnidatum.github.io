@@ -238,11 +238,11 @@ y.domain(
   
 
   svg.append("g")
-      .attr("class", "x axis")
+      .attr("class", "x axis2")
       .attr("transform", "translate(0," + height/2 + ")")
       .call(xAxis);
   svg.append("g")
-      .attr("class", "y axis")
+      .attr("class", "y axis2")
       .call(yAxis)
     .append("text")
       .attr("transform", "rotate(-90)")
