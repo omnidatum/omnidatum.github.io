@@ -29,7 +29,7 @@ var effRate = 0.89;
 
 
 
-
+function draw(){
 var x = d3.scale.linear()
     .range([0, width]);
 
@@ -94,7 +94,7 @@ y.domain([
   d3.max(fucking_charlie, function(d) { return d.value; })
 ]);
 
-  
+
 
   svg.append("g")
       .attr("class", "x axis")
@@ -120,3 +120,24 @@ y.domain([
         .datum(fucking_charlie)
         .attr("class", "line2")
         .attr("d", line2);
+
+
+
+// buttons
+draw();
+
+
+}
+$("#lowButton").click(function(e){
+  sysSize = 1.5;
+  draw();
+});
+
+$("#medButton").click(function(e){
+  sysSize = 4;
+  draw();
+});
+$("#higButton").click(function(e){
+  sysSize = 6;
+  draw();
+});
