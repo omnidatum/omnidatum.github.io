@@ -1,4 +1,4 @@
-var margin = {top: 20, right: 20, bottom: 30, left: 50},
+/*var margin = {top: 20, right: 20, bottom: 30, left: 50},
     width = 600 - margin.left - margin.right,
     height = 400 - margin.top - margin.bottom;
 
@@ -123,7 +123,7 @@ y.domain([
 
 }
 // buttons
-render(sysSize);
+render(sysSize);*/
 
 $("#lowButton").click(function(e){
   sysSize = 1.5;

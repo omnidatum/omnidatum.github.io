@@ -181,7 +181,10 @@ h3 {
   float: right;
   width: 500px;
 }
-
+#investmentCanvas svg{
+  margin:0 auto;
+  display:inherit;
+}
 #investmentWrap {
   background: #2B2E39;
   padding: 75px;
@@ -195,7 +198,7 @@ h3 {
 
 #investmentWrap .canvas {
   background: #353846;
-  height: 600px;
+
   margin: 20px 0;
   width: inherit;
 }
@@ -227,32 +230,18 @@ h3 {
 }
 
 #furtherWrap-inner {
+  display: flex;
+  flex-direction: row;
   margin: auto;
   padding: 40px 0;
   width: 1200px;
 }
-
-#furtherWrap-inner .col1 {
+#furtherWrap-inner .col1,#furtherWrap-inner .col2,#furtherWrap-inner .col3{
   box-sizing: border-box;
-
+  flex-grow: 1;
   padding: 0 15px;
-  width: 390px;
+  width: 33%;
 }
-
-#furtherWrap-inner .col2 {
-  box-sizing: border-box;
-
-  padding: 0 15px;
-  width: 390px;
-}
-
-#furtherWrap-inner .col3 {
-  box-sizing: border-box;
-
-  padding: 0 15px;
-  width: 390px;
-}
-
 #furtherWrap-inner img {
   margin: 40px 0;
   width: 80%;
@@ -351,6 +340,18 @@ h2 {
 
   .page div {
     display: block;
+  }
+}
+@media (max-width: 700px) {
+  #furtherWrap-inner {
+    flex-direction: column;
+  }
+
+  #furtherWrap-inner .col1, #furtherWrap-inner .col2, #furtherWrap-inner .col3 {
+    box-sizing: border-box;
+    flex-grow: 1;
+    padding: 0 15px;
+    width: 100%;
   }
 }
 
